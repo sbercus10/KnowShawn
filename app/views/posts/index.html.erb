@@ -1,0 +1,27 @@
+<h1>Shawn's Blog</h1>
+
+<% @posts.each do |post| %>
+<article>
+    <h2>
+        <%= post.title %>
+        <small>by <%= post.author %></small>
+    </h2>
+    <p>Posted: <%= time_ago_in_words post.published_at %>
+
+    </p>
+    <%= post.author %>
+    <%= post.title %>
+    <%= post.body %>
+    <%= post.published_at %>
+    <%= post.featured %>
+    
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <article>
+<% end %>
+
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>

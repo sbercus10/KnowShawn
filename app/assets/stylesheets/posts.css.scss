@@ -1,0 +1,28 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html{
+  background-color: white; 
+}
+
+h1{
+  color: yellow;
+  font-family: 'SmallCaps', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: center;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+body{
+  margin: 5px, 5px, 5px, 5px;
+  background-color: white;
+}
+  
+footer p{
+  text-align: right;
+  color: white;
+}

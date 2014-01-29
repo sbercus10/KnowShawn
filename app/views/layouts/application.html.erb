@@ -7,13 +7,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <nav>
-      <ul><li><a href='/posts'>Posts</a></li></ul>
-    </nav>
+    <%= render 'layouts/navigation_bar' %>
     <%= yield %>
     <footer>
       <p>&copy;<%= Time.now.year %>, Shawn Bercuson </p>
-
     </footer>
   </body>
 </html>

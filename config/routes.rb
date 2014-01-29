@@ -1,8 +1,15 @@
 Knowshawn::Application.routes.draw do
-  root to: "posts#index"
+
+  # get | post | put | patch | delete
+
+  # get "/url-path", to: "controller#action", as: url_path_name
+  root to: "static_pages#home"
   resources :posts
+  get "/blog", to: "posts#index", as: :posts # I wanted to rewrite posts/index to /blog
 
-
+  get "/gallery", to: "static_pages#gallery", as: :gallery
+  get "/about_me", to: "static_pages#about_me", as: :about_me 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

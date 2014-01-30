@@ -1,2 +1,13 @@
 <h1>Shawn Bercuson</h1>
-<p>This is a website dedicated created, maintained, and updated by Shawn Bercuson.</p>
+<p>This is going to be a website about Shawn Bercuson.</p>
+
+<hr />
+
+<% if @post.present? %>
+<h2>Featured Blog Post</h2>
+<h3> <%= link_to @post.title, post_path(@post) %></h3>
+<p><em><%= @post.author %><em> | <%= time_tag(@post.published_at.to_date) %></p>
+
+<%= simple_format(truncate(@post.body, length: 250, separator: '.', omission: '... (continued)')) %>
+
+<% end %>

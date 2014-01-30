@@ -6,10 +6,18 @@ Knowshawn::Application.routes.draw do
   root to: "static_pages#home"
   resources :posts
   get "/blog", to: "posts#index", as: :posts # I wanted to rewrite posts/index to /blog
+  post "/blog", to: "posts#create", as: :posts
 
   get "/gallery", to: "static_pages#gallery", as: :gallery
   get "/about_me", to: "static_pages#about_me", as: :about_me 
-  
+  get "/about_me", to: "static_pages#about_me", as: :about_me
+
+  # Syntax for Rails 3 and Rails 4
+  # get 'about_us' => 'company#about_us', as: :about_us
+
+  # NAME   VERB     URL             CONRTROLLER PATH
+  #about_us GET /about_us(.:format) company#about_us
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

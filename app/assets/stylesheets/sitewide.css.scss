@@ -1,8 +1,4 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0%;
-  margin: 0%;
+html {
   background: url(http://cdni.tutorialchip.com/wp-content/uploads/2011/03/Free-Hi-Resolution-Wood-Textures-520x362.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover; 
   -moz-background-size: cover; 
@@ -10,12 +6,43 @@ html, body {
   background-size: cover; 
 }
 
-h1 {
-  color: yellow;
+body {
+  width: 75%;
+  background-color: #fff;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: lightblue;
+  padding: 50px;
+}
+
+h1{
+  color: black;
+  font-family: 'SmallCaps', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
   color: darkblue;
+}
+
+a {
+  color: white;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    color: red;
+    background-color: white;
+  }
 }
 
 /* Make Header Sticky */
@@ -23,33 +50,28 @@ h2 {
 
 // #header{ line-height:60px; margin:0 auto; width:940px; text-align:center; }
 // This is the navigation bar design
+
+
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  margin: -60px;
+  padding: 10px;
   width: 100%;
   position: fixed;
-  display: block;
+  text-align: center;
   height: 30px;
   font-size: 16px;
   font-weight: bold;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 0px solid #000000;
-  border-top: 0px solid #000000;
 }
 
 li {
   display: block;
   float: right;
-  margin: 0;
-  padding: 0;
 }
 
 li a {
   display: block;
-  float: left;
-  color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 20px 0 20px;
@@ -70,7 +92,7 @@ li.active a {
 }
 
 footer p{
-  text-align: center;
+  text-align: right;
   color: white;
-  margin: 25%;
+  margin: 0%;
 }

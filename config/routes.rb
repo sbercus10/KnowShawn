@@ -4,7 +4,10 @@ Knowshawn::Application.routes.draw do
 
   # get "/url-path", to: "controller#action", as: url_path_name
   root to: "static_pages#home"
-  resources :posts
+  resources :posts do
+    post 'comments', to: "posts#create_comment", as: :comments
+  end
+
   get "/blog", to: "posts#index", as: :posts # I wanted to rewrite posts/index to /blog
   post "/blog", to: "posts#create", as: :posts
 

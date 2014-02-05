@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
             length: { in: 6..65 }, 
             presence: true,
             uniqueness: true
-  validate :published_at_is_in_the_future, on: :create
+  # validate :published_at_is_in_the_future, on: :create
 
   private
 

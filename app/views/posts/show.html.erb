@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <b>Summary:</b>
+  <%= @post.summary %>
+</p>
+
+<p>
   <b>Body:</b>
   <%= @post.body %>
 </p>
@@ -27,6 +32,14 @@
 
 <h3> Add a comment</h3>
 <%= render 'posts/comment_form' %>
+<% @post.comments.each do |comment| %>
+   <h4> 
+     <%= comment.author %>
+     <small> <%= time_tag(comment.created_at) if comment.created_at %> </small>
+   </h4>
+   <%= simple_format(comment.message) %>
+   <hr />
+ <% end %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>

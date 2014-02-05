@@ -1,25 +1,21 @@
 html {
-  background: url(http://cdni.tutorialchip.com/wp-content/uploads/2011/03/Free-Hi-Resolution-Wood-Textures-520x362.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover; 
-  -moz-background-size: cover; 
-  -o-background-size: cover; 
+  background-color: #AFC6DE; 
   background-size: cover; 
 }
 
 body {
   width: 75%;
-  background-color: #fff;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-color: lightblue;
+  background-color: #AFC6DE;
   padding: 50px;
 }
 
 h1{
   color: black;
   font-family: 'SmallCaps', sans-serif;
-  font-size: 2em;
+  font-size: 5em;
   font-weight: bold;
   font-variant: small-caps;
   text-align: left;
@@ -37,7 +33,7 @@ h2 {
 a {
   color: white;
   &:visited {
-    color: white;
+    color: black;
   }
   &:hover {
     color: red;
@@ -53,15 +49,12 @@ a {
 
 
 ul {
-  margin: -60px;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
-  position: fixed;
-  text-align: center;
   height: 30px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  background-color: black;
+  background-color: #AFC6DE;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -71,10 +64,9 @@ li {
 }
 
 li a {
-  display: block;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 20px 0 20px;
+  padding: 30px 50px;
 }
 
 li a:hover {
@@ -93,6 +85,6 @@ li.active a {
 
 footer p{
   text-align: right;
-  color: white;
+  color: black;
   margin: 0%;
 }

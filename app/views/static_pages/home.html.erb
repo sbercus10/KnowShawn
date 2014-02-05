@@ -1,10 +1,11 @@
-<h1>Welcome to Shawn's Page</h1>
-<p>This is stuff that will talk about me</p>
+<h1>Posts</h1>
 
 <% if @post.present? %>
 <h2>Featured Blog Post</h2>
-<h3> <%= link_to @post.title, post_path(@post) %></h3>
-<p><em><%= @post.author %><em> | <%= time_tag(@post.published_at.to_date) %></p>
+<h3> <%= link_to @post.title, post_path(@post) %><strong> | Comments (<%= @post.comments.count %>)</strong></h3>
+<p>Summary: <%= @post.summary %></p>
+<p><em><%= @post.author %></em> | <%= time_tag(@post.published_at.to_date) %>
+</p>
 
 <%= simple_format(truncate(@post.body, length: 250, separator: '.', omission: '... (continued)')) %>
 

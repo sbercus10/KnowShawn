@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<!-- BEGIN: Sticky Header -->
-<div id="header_container">
-    <div id="header">
-    </div>
-</div>
-<!-- END: Sticky Header -->
   <head>
     <title>Knowshawn</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -14,16 +7,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="nav">
-      <%= render 'layouts/navigation_bar' %>
-    </div>
-    <div class="content">
-      <%= yield %>
-    </div>
-    <footer>
-      <p>&copy;<%= Time.now.year %>, Shawn Bercuson</p>
-    </footer>
+    <%= render 'layouts/navigation_bar' %>
+      <section id="content">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: name %>
+      <% end %>
+      <div class="jumbotron">
+        <div class="container"
+          <%= yield %>
+        </div>
+      </div>
   </body>
+   <footer class="footer">
+      <p>&copy;<%= Time.now.year %>, Shawn Bercuson</p>
 </html>
 
 

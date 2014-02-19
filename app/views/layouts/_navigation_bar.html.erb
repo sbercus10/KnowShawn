@@ -1,13 +1,29 @@
-<nav>
-  <ul>
-    <!-- <li><a href='/home'>Home</a></li> -->
-    <li><%= link_to 'About Me', about_me_path %></li>
-    <li><%= link_to 'Portfolio', gallery_path %></li>
-    <li><%= link_to 'Blog', posts_path %></li>
-    <li><%= link_to 'Home', root_path %></li>
-    <!-- <li><a href='/posts'>More_Blog_Posts</a></li> -->
-    <!-- <li><a href='http://linkd.in/1mQMHKK'>Shawn's LinkedIn</a></li> -->
-    <!-- <li><a href='https://angel.co/sbercuson'>Angel_List Profile</a></li> -->
-    <!-- <li><a href='https://twitter.com/sbercuson'>Shawn's_Twitter</a></li> -->
-  </ul>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+            <li class="active"><%= link_to 'Home', root_path %></li>
+            <li class="active"><%= link_to 'About Me', about_me_path %></li>
+            <li class="active"><%= link_to 'Portfolio', gallery_path %></li>
+            <li class="active"><%= link_to 'Blog', posts_path %></li>
+            <li class="active"><%= link_to 'Contact Me', contact_me_path %></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+            <li class="active"><%= link_to 'Sign Up', sign_up_path %></li>
+            <li class="active"><%= link_to 'Sign In', sign_in_path %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>

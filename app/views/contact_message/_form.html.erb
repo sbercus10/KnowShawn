@@ -1,0 +1,9 @@
+<%= simple_form_for(@contact_message, url:contact_me_path) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, placeholder: "Your name"%>
+    <%= f.input :email, placeholder: "johndoe@example.com" %>
+    <%= f.input :subject, placeholder: "Why are your writing to me?" %>
+    <%= f.input :body, placeholder: "What can I help you with?" %>
+    <%= f.input :topic %>
+    <%= f.button :submit, class: 'btn-success' %>
+  <% end %>

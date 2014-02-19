@@ -1,5 +1,11 @@
 Knowshawn::Application.routes.draw do
 
+  resources :users
+  get "/sign-up", to: "users#new", as: :sign_up
+  get "/sign-in", to: "sessions#new", as: :sign_in
+  post "/sign-in", to: "sessions#create", as: :create_session
+  get "/contact-me", to: "contact_message#new", as: :contact_me
+  post "/contact-me", to: "contact_message#create", as: :contact_me
   # get | post | put | patch | delete
 
   # get "/url-path", to: "controller#action", as: url_path_name
@@ -13,7 +19,7 @@ Knowshawn::Application.routes.draw do
 
   get "/gallery", to: "static_pages#gallery", as: :gallery
   get "/about_me", to: "static_pages#about_me", as: :about_me 
-  get "/about_me", to: "static_pages#about_me", as: :about_me
+
 
   # Syntax for Rails 3 and Rails 4
   # get 'about_us' => 'company#about_us', as: :about_us

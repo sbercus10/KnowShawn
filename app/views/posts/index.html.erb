@@ -1,11 +1,10 @@
 <div class = "content">
 <h1>Posts</h1>
-<hr>
 <table class="posts-table">
     <tbody>
         <% @posts.each do |current_post| %>
           <tr>
-             <td class="published_at"><p><%= time_ago_in_words current_post.published_at %> ago</p></td>
+             <td class="published_at"><p><%= current_post.published_at.strftime("%B %d, %Y") %></p></td>
              <td class="title"><p><%= link_to current_post.title, post_path(current_post) %></p></td>
              <td class="summary"><p><%= current_post.summary %></p></td>
              <td class="comments"><p><%= current_post.comments.count %> Comments</p></td>
@@ -13,8 +12,8 @@
         <% end %>
     </tbody>
 </table>
-<hr>
 
+<br>
 <%= link_to 'New Post', new_post_path %>
 
 

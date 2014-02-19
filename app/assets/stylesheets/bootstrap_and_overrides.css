@@ -1,0 +1,9 @@
+$navbar-default-bg: lightblue;
+$text-color: white;
+
+$jumbotron-padding: 30px;
+$jumbotron-color: grey;
+$jumbotron-bg: white;
+
+@import "bootstrap";
+  

@@ -21,8 +21,13 @@
             <li class="active"><%= link_to 'Contact Me', contact_me_path %></li>
         </ul>
         <ul class="nav navbar-nav pull-right">
+          <% if current_user %>
+            Hello, <%= current_user.first_name %>
+            <li class="active"><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
+          <% else %>
             <li class="active"><%= link_to 'Sign Up', sign_up_path %></li>
             <li class="active"><%= link_to 'Sign In', sign_in_path %></li>
+          <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -4,6 +4,7 @@ Knowshawn::Application.routes.draw do
   get "/sign-up", to: "users#new", as: :sign_up
   get "/sign-in", to: "sessions#new", as: :sign_in
   post "/sign-in", to: "sessions#create", as: :create_session
+  delete "/sign-out", to: "sessions#destroy", as: :sign_out
   get "/contact-me", to: "contact_message#new", as: :contact_me
   post "/contact-me", to: "contact_message#create", as: :contact_me
   # get | post | put | patch | delete

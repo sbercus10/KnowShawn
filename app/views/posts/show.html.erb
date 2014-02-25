@@ -1,34 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Author:</b>
-  <%= @post.author %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Summary:</b>
-  <%= @post.summary %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
-
-<p>
-  <b>Published at:</b>
-  <%= @post.published_at %>
-</p>
-
-<p>
-  <b>Featured:</b>
-  <%= @post.featured %>
-</p>
+<p><b>Author:</b><%= @post.author %></p>
+<p><b>Title:</b><%= @post.title %></p>
+<p><b>Summary:</b><%= @post.summary %></p>
+<p><b>Body:</b><%= @post.body %></p>
+<p><b>Published at:</b><%= @post.published_at %></p>
+<p><b>Featured:</b><%= @post.featured %></p>
 
 <h3> Add a comment</h3>
 <%= render 'posts/comment_form' %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140224234405) do
+ActiveRecord::Schema.define(:version => 20140226014609) do
 
   create_table "comments", :force => true do |t|
     t.text     "message"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(:version => 20140224234405) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "pics", :force => true do |t|
+    t.string   "name"
+    t.integer  "picable_id"
+    t.string   "picable_type"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "pics", ["picable_id"], :name => "index_pics_on_picable_id"
+
   create_table "posts", :force => true do |t|
     t.string   "author"
     t.string   "title"
@@ -44,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20140224234405) do
     t.text     "summary"
   end
 
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "date"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "tags", :force => true do |t|
     t.string   "name"
     t.integer  "taggable_id"
@@ -53,6 +75,15 @@ ActiveRecord::Schema.define(:version => 20140224234405) do
   end
 
   add_index "tags", ["taggable_id"], :name => "index_tags_on_taggable_id"
+
+  create_table "tools", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tools", ["project_id"], :name => "index_tools_on_project_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

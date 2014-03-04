@@ -11,6 +11,7 @@ gem 'pg', group: :production
 gem 'simple_form'
 gem 'jquery-rails'
 gem "paperclip", "~> 3.0"
+gem "cocoon"
 
 group :development do
   gem 'pry-rails'

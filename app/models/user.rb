@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     styles: { large: "600x600>", 
       medium: "300x300>", 
       small: "100x100>",
-      tiny: "30x30>"}
+      tiny: "30x30>"},
     default_url: "/assets/:attachment/:style.png"
 
   validates :email, :first_name, :last_name, presence: true

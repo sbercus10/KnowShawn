@@ -1,0 +1,5 @@
+ <% if @post.tags.any? %>
+    <% @post.tags.each do |tag| %>
+      <span class="label label-success"><%= tag.name %></span>
+    <% end %>
+  <% end %>
